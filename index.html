@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter  the Number</h1>
+    <label>Number:</label>
+    <input type="text " id="strong">
+    <button type="submit" onclick="armstrong()">Submit</button>
+    <div id="display">
+    </div>
+
+
+
+    <script>
+        function armstrong(){
+            let dev=document.getElementById('strong').value;
+            let devsplit=dev.split('')
+            let dis=document.getElementById('display')
+            let count=0
+            for( let i=0;i<devsplit.length;i++){
+              let num=parseInt(devsplit[i])
+              count=num*num*num + count
+            }
+            
+            if(dev==count){
+                dis.innerHTML='armstrong number'
+            }
+            else{
+                dis.innerHTML='not'
+            }
+        }
+    </script>
+</body>
+</html>
